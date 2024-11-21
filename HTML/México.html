@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles1.css">
+    <title>Cocina México</title>   
+
+    <script src="https://kit.fontawesome.com/f5ffacda22.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link rel="icon" type="image/x-icon" href="./img/México.ico">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+</head>
+    <body>
+    
+        <br/>
+    
+            <center>
+                <img src="./img/México.jpg">
+                <h1><span style="color:green">MÉ</span><span style="color:white">XI</span><span style="color:red">CO<span></h1>
+            </center>
+    
+            <section>
+                <br/>
+                <button type="submit" onclick="location='./index.html'">Inicio</button>
+                <button type="submit" id="open">Agregar plato</button>
+                
+                <div class="container-1">
+                    <ul class="switch">
+                        <i class="fa-solid fa-sun"></i>
+                        <i class="fa-solid fa-moon"></i>
+                    </ul>
+                </div>
+
+                <script src="./js/dark.js"></script>
+
+                <br/>
+
+                <div class="modal-container" id="modal_container">
+                    <div class="modal">
+                        <form id="Formulario">
+                            <center>
+                                <h1>Ingresar nuevo plato</h1>
+                
+                                <label for="Plato">Plato:</label>
+                                <input type="text" id="Plato" name="Plato" placeholder="Plato" required></input><br/><br/>
+                                
+                                <label for="Precio">Precio:</label>
+                                <input type="text" id="Precio" name="Precio" placeholder="Precio" required></input><br/><br/>
+                                
+                                <label for="Cantidad">Cantidad:</label>
+                                <input type="text" id="Cantidad" name="Cantidad" placeholder="Cantidad" required></input><br/><br/>
+                
+                                <label for="Imagen">Imagen:</label>
+                                <br/><br/>
+                                <div class="drag" id="dragZone">
+                                    <h2>Arrastra y suelta imágenes</h2>
+                                    <span>O</span><br/>
+                                    <button type="button" id="selectFilesButton">Selecciona tus archivos</button>
+                                    <input type="file" id="Imagen" name="Imagen" hidden accept="image/*"></input><br/><br/>
+                                </div>
+                                <div id="preview"></div>
+                
+                                <br/>
+                                <button type="button" id="guardarButton">Guardar</button>
+                            </center>
+                        </form><br/>
+                        
+                        <form>
+                            <button type="button" id="close">Cerrar</button><br/><br/>
+                        </form>
+                    </div>
+                </div>
+    
+            </section>
+        <br/><br/>
+    
+            <center>
+                <table id="DishesTable">
+                    <thead>
+                        <tr>
+                            <th>Plato</th>
+                            <th>Precio</th>
+                            <th>Cantidad disponible&nbsp</th>
+                            <th>Imagen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tacos</td>
+                            <td>$50</td>
+                            <td>26</td>
+                            <td><img src="./img/Taco.jfif" style="width: 150px; height: 100px;"></td>
+                        </tr>
+                        <tr>
+                            <td>Enchiladas</td>
+                            <td>$75</td>
+                            <td>30</td>
+                            <td><img src="./img/enchiladas.jfif" style="width: 150px; height: 100px;"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <script src="./js/app.js"></script>
+        </center><br/>
+    
+        <text>Los precios están registrados en la moneda de cada país*</text>
+
+        <br/><br/><br/><br/>
+
+        <center>
+            <div class="sedes">
+                <div class="city">
+                <img src="./img/CDMX.jpg" class="Img" alt="">
+                <div class="Ciudades">
+                    <center><h2>CDMX</h2><br/>
+                    <text>Subsede principal</text></br></br></br>
+                        <text>Nuestra subsede principal de México abrió en el año 2013</text></br></br></center>
+                </div><br/><br/><br/>
+                </div>
+
+                <br/><br/><br/><br/>
+
+                <div class="city">
+                <img src="./img/Guadalajara.avif" class="Img" alt="">
+                <div class="Ciudades-1">
+                    <center><h2 style="color: black;">Guadalajara</h2><br/>
+                    <text style="color: black;">Subsede</text></br><br/>
+                    <text style="color: black;">Nuestra segunda subsede de México abrió en el año 2015</text></br></br></center>
+                </div><br/><br/><br/>
+                </div>
+
+                <br/><br/><br/><br/>
+
+                <div class="city">
+                <img src="./img/Monterrey.webp" class="Img" alt="">
+                <div class="Ciudades-2">
+                <center><h2>Monterrey</h2><br/>
+                <text>Subsede</text></br><br/>
+                    <text>Nuestra tercera subsede de México abrió en el año 2019</text><br/><br/></center>
+                </div><br/><br/><br/>
+                </div>
+            </div>
+
+            <br/><br/><br/><br/>
+
+        <br/><br/>
+
+        <div class="button">
+            <div class="ir-arriba">
+                <i class="fa-solid fa-arrow-up"></i>
+            </div>        
+        </div>
+
+        <footer>
+            <center><h4>Copy CocinaMundo©<br/>
+                        Versión 1.0<br/>
+                        2024
+            </h4></center>
+        </footer>
+        </center>
+
+        <script src="./js/modal.js"></script>
+        <script src="./js/arriba.js"></script>
+        <script src="./js/index.js"></script>
+
+    </body>
+</html>

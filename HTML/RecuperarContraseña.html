@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles2.css">
+    <title>Recuperar Contraseña</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="icon" type="image/x-icon" href="./img/Logo.ico">
+    <script src="https://kit.fontawesome.com/f5ffacda22.js" crossorigin="anonymous"></script>
+
+    <script>
+        function validarFormulario(event) {
+          event.preventDefault();
+    
+          const NuevaContraseña = document.getElementById("Nueva Contraseña").value;
+          const ConfirmarContraseña = document.getElementById("Confirmar Contraseña").value;
+    
+        if (NuevaContraseña === "" || ConfirmarContraseña === "") {
+            Swal.fire({
+                title: "¡Por favor, llena todos los campos!",
+                html: "<p class=swal-text>Llena el formulario para continuar</p>",
+                icon: "error",
+                confirmButtonText: "OK",
+                customClass: {
+                    title: "swal-title",
+                    popup: "swal-popup",
+                    confirmButton: "swal-confirm"
+                }
+            });
+        } else {
+            Swal.fire({
+                title: "¡Contraseña recuperada exitosamente!",
+                html: "<p class=swal-text>¡Bienvenido de nuevo!</p>",
+                icon: "success",
+                confirmButtonText: "OK",
+                customClass: {
+                    title: "swal-title",
+                    popup: "swal-popup",
+                    confirmButton: "swal-confirm"
+                }
+            });
+            // Limpiar el formulario después del envío
+            document.getElementById("Formulario").reset();
+          }
+        }
+    </script>
+
+</head>
+<body>
+    <header>
+        <center>
+            <h1>Recuperar Contraseña</h1>
+        </center>
+
+        <div class="container-1">
+            <ul class="switch">
+                <i class="fa-solid fa-sun"></i>
+                <i class="fa-solid fa-moon"></i>
+            </ul>
+        </div>
+
+        <script src="./js/dark.js"></script>
+
+            <div class="Menu-horizontal-1">
+                <br/>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <a href="./index.html">Inicio</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <a href="./Registro.html">Registrarse</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <a href="./PQRS.html">PQRS</a>
+            </div>
+
+            <br/>
+
+        <br/>
+    </header>
+
+    <br/><br/>
+
+    <section>
+        <br/><br/>
+            <center>
+                <form id="Formulario">
+
+                    <label for="Email">Email:</label>
+                    <input type="email" id="Email" name="Email" placeholder="Email"></input><br/><br/>
+
+                    <label for="Nueva Contraseña">Nueva Contraseña:</label>
+                    <input type="password" id="Nueva Contraseña" name="Nueva Contraseña" placeholder="Nueva Contraseña"></input><br/><br/>
+
+                    <label for="Confirmar Contraseña">Confirmar Contraseña:</label>
+                    <input type="password" id="Confirmar Contraseña" name="Confirmar Contraseña" placeholder="Confirmar Contraseña"></input><br/><br/>
+
+                    <button type="submit" onclick="mostrar()">Ingresar</button>
+                </form><br/><br/>
+            </center>
+
+            <script>
+                document.getElementById("Formulario").addEventListener("submit", validarFormulario);
+            </script>
+        </section>
+    </body>
+</html>
