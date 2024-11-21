@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles2.css">
+    <title>Registrarse</title>
+
+    <script src="https://kit.fontawesome.com/f5ffacda22.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="./img/Logo.ico">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        function validarFormulario(event) {
+          event.preventDefault();
+    
+          const Nombres = document.getElementById("Nombres").value;
+          const Apellidos = document.getElementById("Apellidos").value;
+          const Email = document.getElementById("Email").value;
+          const Contraseña = document.getElementById("Contraseña").value;
+          const ConfirmarContraseña = document.getElementById("ConfirmarContraseña").value;
+    
+        if (Nombres === "" || Apellidos === "" || Email === "" || Contraseña === "" || ConfirmarContraseña === "") {
+            Swal.fire({
+                title: "¡Por favor, llena todos los campos!",
+                html: "<p class=swal-text>Llena el formulario para continuar</p>",
+                icon: "error",
+                confirmButtonText: "OK",
+                customClass: {
+                    title: "swal-title",
+                    popup: "swal-popup",
+                    confirmButton: "swal-confirm"
+                }
+            });
+        } else {
+            Swal.fire({
+                title: "¡Registro exitoso!",
+                html: "<p class=swal-text>¡Bienvenido!</p>",
+                icon: "success",
+                confirmButtonText: "OK",
+                customClass: {
+                    title: "swal-title",
+                    popup: "swal-popup",
+                    confirmButton: "swal-confirm"
+                }
+            });
+              // Limpiar el formulario después del envío
+              document.getElementById("Formulario").reset();
+          }
+        }
+    </script>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+<body>
+    <header>
+        <center>
+            <h1>Registrarse</h1>
+        </center>
+        <div class="Menu-horizontal-1">
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="./index.html">Inicio</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="./Inicio.html">Iniciar sesión</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="./PQRS.html">PQRS</a>
+        </div>
+
+        <div class="container-1">
+            <ul class="switch">
+                <i class="fa-solid fa-sun"></i>
+                <i class="fa-solid fa-moon"></i>
+            </ul>
+        </div>
+
+        <br/>
+
+        <script src="./js/dark.js"></script>
+
+    </header>
+
+    <br/><br/>
+
+    <section>
+
+        <br/><br/>
+            <center>
+                <form id="Formulario">
+
+                    <label for="Nombres">Nombres:</label>
+                    <input type="text" id="Nombres" name="Nombres" placeholder="Nombres"></input><br/><br/>
+
+                    <label for="Apellidos">Apellidos:</label>
+                    <input type="text" id="Apellidos" name="Apellidos" placeholder="Apellidos"></input><br/><br/>
+
+                    <label for="Email">Email:</label>
+                    <input type="email" id="Email" name="Email" placeholder="Email"></input><br/><br/>
+
+                    <label for="Contraseña">Contraseña:</label>
+                    <input type="password" id="Contraseña" name="Contraseña" placeholder="Contraseña"></input><br/><br/>
+
+                    <label for="ConfirmarContraseña">Confirmar Contraseña:</label>
+                    <input type="password" id="ConfirmarContraseña" name="ConfirmarContraseña" placeholder="Confirmar contraseña"></input><br/><br/>
+                    <br/>
+
+                    <div>
+                        <div class="g-recaptcha" data-sitekey="6LeeWWMqAAAAAOy7fkKVBuqCE5uzfSiCr8TXsSpr"></div>
+                    </div><br/>
+
+                    <button action='submit'>Registrarse</button>
+
+                </form><br/><br/>
+            </center>
+
+            <script>
+                document.getElementById("Formulario").addEventListener("submit", validarFormulario);
+            </script>
+
+        </section>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles1.css">
+    <title>PQRS</title>
+
+    <script src="https://kit.fontawesome.com/f5ffacda22.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="./img/Logo.ico">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        function validarFormulario(event) {
+            event.preventDefault();
+
+            const PQRS = document.getElementById("PQRS").value;
+
+            if (PQRS === "") {
+                Swal.fire({
+                    title: "¡Este campo es obligatorio!",
+                    html: "<p class=swal-text>Llena este campo para continuar</p>",
+                    icon: "error",
+                    confirmButtonText: "OK",
+                    customClass: {
+                        title: "swal-title",
+                        popup: "swal-popup",
+                        confirmButton: "swal-confirm"
+                    }
+                });
+            } else {
+                Swal.fire({
+                    title: "¡Gracias por tus comentarios!",
+                    html: "<p class=swal-text>Mejoraremos para ofrecerte un mejor servicio</p>",
+                    icon: "success",
+                    confirmButtonText: "OK",
+                    customClass: {
+                        title: "swal-title",
+                        popup: "swal-popup",
+                        confirmButton: "swal-confirm"
+                    }
+                });
+                // Limpiar el formulario después del envío
+                document.getElementById("Formulario").reset();
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+    <header>
+        <center>
+            <h1 style="color: black;">PQRS</h1>
+        </center>
+            <div class="Menu-horizontal-1">
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="./index.html">Inicio</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <a href="./Registro.html">Registrarse</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <a href="./Inicio.html">Iniciar sesión</a>
+            </div>
+        
+            <div class="container-1">
+                <ul class="switch">
+                    <i class="fa-solid fa-sun"></i>
+                    <i class="fa-solid fa-moon"></i>
+                </ul>
+            </div>
+    
+            <br/>
+    
+            <script src="./js/dark.js"></script>
+
+    </header><br/><br/>
+
+    <section>
+        <br/>
+        <center>
+        <h1>PQRS</h1>
+
+            <h3>Tus opiniones son importantes para nosotros</h3>    
+            <text>Tus comentarios ayudarán a mejorar nuestro servicio, y a brindarte soluciones de manera rápida</text><br/><br/>
+
+                <form id="Formulario">
+                    <textarea id="PQRS" name="PQRS" placeholder="Escribe aquí tu petición..."></textarea><br/><br/>
+                    <button type="submit">Enviar</button><br/><br/><br/>
+                </form>
+        </center>
+
+        <script>
+            document.getElementById("Formulario").addEventListener("submit", validarFormulario);
+        </script>
+    </section>
+</body>
+</html>

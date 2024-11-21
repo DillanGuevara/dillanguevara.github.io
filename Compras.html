@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Carrito de compras</title>
+
+    <script src="https://kit.fontawesome.com/f5ffacda22.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="./img/Logo.ico">
+
+</head>
+
+<body>
+    
+    <header>    
+
+        <h1>Carrito de compras</h1>
+
+        <div class="container-1">
+            <div class="container-3 active">
+                <input type="search" id="Buscar" name="Buscar" placeholder="Buscar..."></input>
+                <a href="#" target="_blank">
+                        <i class="fa-solid fa-magnifying-glass icon"></i>
+                </a>
+                <li class="suggestions">
+                    <ul>Ajiaco</ul>
+                    <ul>Bandeja paisa</ul>
+                    <ul>Causa Limeña</ul>
+                    <ul>Ceviche</ul>
+                    <ul>Choripan</ul>
+                    <ul>Chuleta Valluna</ul>
+                    <ul>Cocido Madrileño</ul>
+                    <ul>Enchiladas</ul>
+                    <ul>Gazpacho</ul>
+                    <ul>Lomo saltado</ul>
+                    <ul>Milanesa</ul>
+                    <ul>Paella</ul>
+                    <ul>Polenta</ul>
+                    <ul>Pozole</ul>
+                    <ul>Tacos</ul>
+                </li>
+            </div>
+
+            <div class="container-2">
+                <ul class="switch">
+                    <i class="fa-solid fa-sun"></i>
+                    <i class="fa-solid fa-moon"></i>
+                </ul>
+            </div>
+
+        </div>
+
+        <script src="./js/dark.js"></script>
+
+    <nav>
+        <div class="Menu-horizontal-1">
+            <div class="Menu-horizontal" style="padding-right: 50%;">
+                <ul>
+                    <br/>
+                    <li>
+                        <a href="./index.html">Inicio</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <a href="./Registro.html">Registrarse</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <a href="./Inicio.html">Iniciar sesión</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <a href="./PQRS.html">PQRS</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    </li>
+                </ul>
+            </div>
+
+        </div><br/>
+    </nav>
+    </header>
+
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+    <center>
+
+        <h1>¿Que quieres hoy?</h1>
+        <text>Los mejores platos directamente a tu mesa</text>
+
+        <br/><br/><br/><br/>
+
+        <div class="compras" id="compras">
+            <div class="producto-Col" data-nombre="Ajiaco">
+                <img src="./img/Ajiaco.jpg" class="Img">
+                <div><br/>
+                    <p>Ajiaco</p>
+                    <img src="./img/Colombia.jpg" style="width: 40px; height: 25px;"><br/>
+                    <p class="Precio">$15000</p>
+                        <button onclick="comprarProductoCol(this)">Comprar ahora</button>
+                    <br/><br/><br/><br/><br/><br/>
+                </div>
+            </div>
+            <div class="producto-Col" data-nombre="Bandeja paisa">
+                <img src="./img/Bandeja paisa.jpg" class="Img">
+                <div><br/>
+                    <p>Bandeja paisa</p>
+                    <img src="./img/Colombia.jpg" style="width: 40px; height: 25px;"><br/>
+                    <p class="Precio">$15000</p>
+                        <button onclick="comprarProductoCol(this)">Comprar ahora</button>
+                    <br/><br/><br/><br/><br/><br/>
+                </div>
+            </div>
+            <div class="producto-Per" data-nombre="Causa Limeña">
+                <img src="./img/Causa Limeña.jpg" class="Img" alt="">
+                <div><br/>
+                    <p>Causa Limeña</p>
+                    <img src="./img/Perú.jpg" style="width: 40px; height: 25px;"><br/>
+                    <p class="Precio">$15</p>
+                        <button onclick="comprarProductoPer(this)">Comprar ahora</button>
+                    <br/><br/><br/><br/><br/><br/>
+                </div>
+            </div>
+            <div class="producto-Per" data-nombre="Ceviche">
+                <img src="./img/ceviche.jpg" class="Img"  alt="">
+                <div><br/>
+                    <p>Ceviche</p>
+                    <img src="./img/Perú.jpg" style="width: 40px; height: 25px;"><br/>
+                    <p class="Precio">$20</p>
+                        <button onclick="comprarProductoPer(this)">Comprar ahora</button>
+                    <br/><br/><br/><br/><br/><br/>
+                </div>
+            </div>
+            <div class="producto-Arg" data-nombre="Choripan">
+                <img src="./img/Choripan.jfif" class="Img"  alt="">
+                <div><br/>
+                    <p>Choripan</p>
+                    <img src="./img/Argentina.png" style="width: 40px; height: 25px;"><br/>
+                    <p class="Precio">$3500</p>
+                        <button onclick="comprarProductoArg(this)">Comprar ahora</button>
+                    <br/><br/><br/><br/><br/><br/>
+                </div>
+            </div>
+            <div class="producto-Col" data-nombre="Chuleta Valluna">
+                <img src="./img/Chuleta Valluna.jpg" class="Img"  alt="">
+                <div><br/>
+                    <p>Chuleta Valluna</p>
+                    <img src="./img/Colombia.jpg" style="width: 40px; height: 25px;"><br/>
+                    <p class="Precio">$20000</p>
+                        <button onclick="comprarProductoCol(this)">Comprar ahora</button>
+                    </form><br/><br/><br/><br/><br/><br/>
+                </div>
+            </div>
+            <div class="producto" data-nombre="Cocido">
+                <img src="./img/Cocido.jpg" class="Img"  alt="">
+                <div><br/>
+                    <p>Cocido Madrileño</p>
+                    <img src="./img/España.jpg" style="width: 40px; height: 25px;"><br/>
+                    <p class="Precio">€5</p>
+                        <button onclick="comprarProducto(this)">Comprar ahora</button>
+                    <br/><br/><br/><br/><br/><br/>
+                </div>
+            </div>
+            <div class="producto-Mex" data-nombre="Enchiladas">
+                <img src="./img/enchiladas.jfif" class="Img"  alt="">
+                <div><br/>
+                    <p>Enchiladas</p>
+                    <img src="./img/México.jpg" style="width: 40px; height: 25px;"><br/>
+                    <p class="Precio">$50</p>
+                        <button onclick="comprarProductoMex(this)">Comprar ahora</button>
+                    <br/><br/><br/><br/><br/><br/>
+                </div>
+            </div>
+            <div class="producto" data-nombre="Gazpacho">
+                <img src="./img/gazpacho.jpg" class="Img"  alt="">
+                <div><br/>
+                    <p>Gazpacho</p>
+                    <img src="./img/España.jpg" style="width: 40px; height: 25px;"><br/>
+                    <p class="Precio">€5</p>
+                        <button onclick="comprarProducto(this)">Comprar ahora</button>
+                    <br/><br/><br/><br/><br/><br/>
+                </div>
+            </div>
+            <div class="producto-Per" data-nombre="Lomo saltado">
+                <img src="./img/Lomo saltado.jpeg" class="Img"  alt="">
+                <div><br/>
+                    <p>Lomo saltado</p>
+                    <img src="./img/Perú.jpg" style="width: 40px; height: 25px;"><br/>
+                    <p class="Precio">$15</p>
+                        <button onclick="comprarProductoPer(this)">Comprar ahora</button>
+                    <br/><br/><br/><br/><br/><br/>
+                </div>
+            </div>
+            <div class="producto-Arg" data-nombre="Milanesa">
+                <img src="./img/Milanesa.jpg" class="Img"  alt="">
+                <div><br/>
+                    <p>Milanesa</p>
+                    <img src="./img/Argentina.png" style="width: 40px; height: 25px;"><br/>
+                    <p class="Precio">$3000</p>
+                        <button onclick="comprarProducto(this)">Comprar ahora</button>
+                    <br/><br/><br/><br/><br/><br/>
+                </div>
+            </div>
+            <div class="producto" data-nombre="Paella">
+                <img src="./img/paella.jfif" class="Img"  alt="">
+                <div><br/>
+                    <p>Paella</p>
+                    <img src="./img/España.jpg" style="width: 40px; height: 25px;"><br/>
+                    <p class="Precio">€5</p>
+                        <button onclick="comprarProducto(this)">Comprar ahora</button>
+                    <br/><br/><br/><br/><br/><br/>
+                </div>
+            </div>
+            <div class="producto-Arg" data-nombre="Polenta">
+                <img src="./img/Polenta.jpg" class="Img"  alt="">
+                <div><br/>
+                    <p>Polenta</p>
+                    <img src="./img/Argentina.png" style="width: 40px; height: 25px;"><br/>
+                    <p class="Precio">$3500</p>
+                        <button onclick="comprarProductoArg(this)">Comprar ahora</button>
+                    <br/><br/><br/><br/><br/><br/>
+                </div>
+            </div>
+            <div class="producto-Mex" data-nombre="Pozole">
+                <img src="./img/Pozole.jfif" class="Img"  alt="">
+                <div><br/>
+                    <p>Pozole</p>
+                    <img src="./img/México.jpg" style="width: 40px; height: 25px;"><br/>
+                    <p class="Precio">$75</p>
+                        <button onclick="comprarProductoMex(this)">Comprar ahora</button>
+                    <br/><br/><br/><br/><br/><br/>
+                </div>
+            </div>
+            <div class="producto-Mex" data-nombre="Taco">
+                <img src="./img/Taco.jfif" class="Img"  alt="">
+                <div><br/>
+                    <p>Tacos</p>
+                    <img src="./img/México.jpg" style="width: 40px; height: 25px;"><br/>
+                    <p class="Precio">$60</p>
+                        <button onclick="comprarProductoMex(this)">Comprar ahora</button>
+                    <br/><br/><br/><br/><br/><br/>
+                </div>
+            </div>
+        </div>
+    </center>
+
+    <br/><br/><br/>
+
+    <text>Los precios están registrados en la moneda de cada país*</text>
+
+    <div class="button">
+        <div class="ir-arriba">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>        
+    </div>
+
+    <footer>
+        <center><h4>Copy CocinaMundo©<br/>
+                    Versión 1.0<br/>
+                    2024
+        </h4></center>
+    </footer>
+
+    <script src="./js/compras.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/suggestions.js"></script>
+    <script src="./js/arriba.js"></script>
+ 
+</body>
+</html>
