@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #666;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+nav {
+    background-color: lightgrey;
+    float: left;
+    width: 10%;
+    height: 700px;
+    padding: 20px;
+}
+
+article {
+    float: left;
+    padding: 20px;
+    width: 90%;
+    background-color: #f1f1f1;
+    height: 900px;
+}
+
+img {
+    width: 600px;
+}
+
+input {
+    border-radius: 5px 0 0 5px;
+    border: none;
+    padding: 4.5px;
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}
+
+footer {
+    background-color: grey;
+    width: 100%;
+    max-width: 5000px;
+    height: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.container-1 {
+    position: relative;
+    padding-left: 85%;
+    cursor: pointer;
+}
+
+.container-1 ul:last-child.active {
+    background-color: lightcyan;
+}
+
+.switch {
+    width: 65px;
+    height: 29px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 50px;
+    border: #132b41 solid 2px;
+    background-color: #132b41;
+    left: 0;
+    right: unset;
+}
+
+.switch.active {
+    width: 65px;
+    height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 50px;
+    border: lightcyan solid 2px;
+    background-color: #132b41;
+}
+
+.switch i {
+    font-size: 1rem;
+    color: lightcyan;
+}
+
+body.active {
+    background-color: #062c4d;
+}
+
+body.active section nav {
+    background-color: #001c36;
+    color: white;
+}
+
+body.active section a {
+    color: white;
+}
+
+body.active footer {
+    background-color: #001c36;
+    color: white;
+}
+
+body.active footer text a {
+    color: white;
+}
+
+body.active section article {
+    background-color: #164068;
+    color: white;
+}
+
+.container-1 ul:last-child::before {
+    content: "";
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: lightcyan;
+    border: solid thin black;
+    left: 0;
+    right: unset;
+}
+
+.container-1 ul:last-child.active::before {
+    content: "";
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #132b41;
+    border: solid thin;
+    left: 0;
+    right: unset;
+}
+
+.container-1 ul:last-child.active::before {
+    left: unset;
+    right: 0;
+    border: solid thin #132b41;
+}
+
+.container-1 ul:last-child.active i:first-child {
+    color: #132b41;
+}
+
+.container-1 ul:last-child.active {
+    background-color: lightcyan;
+}
+
+button:hover {
+    background-color: rgb(253, 131, 44);
+}
+
+section {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+section > nav > a {
+    display: flex;
+    padding: 15px 20px;
+}
+
+section > nav > a {
+    display: flex;
+}
+
+section nav a {
+    position: relative;
+}
+
+section nav a::before {
+    width: 100%;
+    bottom: -5px;
+    right: 0;
+}
+
+section nav a:hover::before {
+    width: 70%;
+    opacity: 1;
+}
+
+section nav a::before,
+section nav a::after {
+    content: '';
+    width: 70px;
+    border-bottom: 2px solid rgb(253, 131, 44);
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.Menu-horizontal-1 ul li a::after {
+    width: 70%;
+    bottom: -15px;
+    left: 0;
+}
+
+.Menu-horizontal-1 ul li a:hover::after {
+    opacity: 1;
+    width: 40%;
+}

@@ -1,0 +1,579 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: darkgrey;
+    gap: 15%;
+}
+
+header {
+    background-color: rgb(253, 131, 44);
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+}
+
+nav {
+    background-color: rgb(104, 42, 42);
+}
+
+nav .Menu-horizontal-1 ul li a {
+    color: white;
+}
+
+.Menu-horizontal-1 li a {
+    color: white;
+    justify-content: center;
+}
+
+.Menu-horizontal-1 .Menu-horizontal li a {
+    color: white;
+    align-items: center;
+    height: 60px;
+}
+
+.Menu-horizontal-3 {
+    color: black;
+    align-items: center;
+    height: 40px;
+}
+
+section {
+    background-color: grey;
+    background-size: 500px;
+}
+
+.container-1 {
+    display: flex;
+    justify-content: center;
+    max-height: 10px;
+    position: fixed;
+}
+
+body nav div ul li a text {
+    background-color: white;
+    color: black;
+}
+
+body section.active h2 {
+    color: white;
+}
+
+.switch {
+    width: 50px;
+    height: 25px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 50px;
+    border: #132b41 solid 2px;
+    background-color: #132b41;
+}
+
+.switch.active {
+    width: 50px;
+    height: 25px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 50px;
+    border: lightcyan solid 2px;
+    background-color: #132b41;
+}
+
+.switch i {
+    font-size: 1rem;
+    color: lightcyan;
+}
+
+.container-1 ul:last-child::before {
+    content: "";
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: lightcyan;
+    border: solid thin black;
+    left: 0;
+    right: unset;
+}
+
+.container-1 ul:last-child.active::before {
+    content: "";
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #132b41;
+    border: solid thin;
+    left: 0;
+    right: unset;
+}
+
+.container-1 ul:last-child.active::before {
+    left: unset;
+    right: 0;
+    border: solid thin #132b41;
+}
+
+.container-1 ul:last-child.active i:first-child {
+    color: #132b41;
+}
+
+.container-1 ul:last-child.active {
+    background-color: lightcyan;
+}
+
+input {
+    padding: 6.5px;
+    border-radius: 10px 0 0 10px;
+    border: 10px;
+    border-color: black;
+}
+
+body.active nav {
+    background-color: #13354e;
+}
+
+body.active {
+    background-color: #011c35;
+}
+
+body.active section h2 {
+    color: white;
+}
+
+body.active section h3 {
+    color: white;
+}
+
+body.active section h4 {
+    color: white;
+}
+
+body.active section text {
+    color: white;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 50%;
+    height: 10px;
+    background-color: lightgrey;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    width: 350px;
+}
+
+footer {
+    background-color: grey;
+    width: 100%;
+    max-width: 5000px;
+    height: 100px;
+}
+
+body.active footer {
+    background-color: #00203b;
+}
+
+body.active footer h4 {
+    color: white;
+}
+
+body.active footer text a {
+    color: white;
+}
+
+th {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+td {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    display: block;
+}
+
+.suggestions ul {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: block;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    background-color: #132b41;
+    border: 0;
+    border-radius: 0;
+    padding: 7px 7px;
+    color: lightcyan;
+    position: absolute;
+}
+
+button:hover {
+    background-color: rgb(253, 131, 44);
+}
+
+.Menu-horizontal {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Menu-horizontal > li > a {
+    display: flex;
+    padding: 15px 20px;
+}
+
+.Menu-horizontal-1 > ul > a {
+    display: flex;
+}
+
+.Menu-horizontal-1 ul li a {
+    position: relative;
+}
+
+.Menu-horizontal-1 ul li a::before {
+    width: 100%;
+    bottom: -5px;
+    right: 0;
+}
+
+.Menu-horizontal-1 ul li a:hover::before {
+    width: 70%;
+    opacity: 1;
+}
+
+.Menu-horizontal-1 ul li a::before,
+.Menu-horizontal-1 ul li a::after {
+    content: '';
+    width: 70px;
+    border-bottom: 2px solid rgb(253, 131, 44);
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+
+.Menu-horizontal-1 ul li a::after {
+    width: 70%;
+    bottom: -15px;
+    left: 0;
+}
+
+.Menu-horizontal-1 ul li a:hover::after {
+    opacity: 1;
+    width: 40%;
+}
+
+.Menu-vertical {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    padding: 50px 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Menu-horizontal li:hover .Menu-vertical {
+    display: block;
+}
+
+li {
+    color: white;
+}
+
+.Menu-vertical li a {
+    display: flex;
+    color: white;
+    padding: 15p 15px 15px 20px;
+}
+
+body header h1 {
+    color: black;
+    padding-left: 20px;
+}
+
+body.active header h1 {
+    color: black;
+    padding-left: 20px;
+}
+
+body.active h1 {
+    color: white;
+}
+
+body.active text {
+    color: white;
+}
+
+body.active .compras div .producto p {
+    color: white;
+}
+
+.Img {
+    width: 320px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.compras {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    margin-bottom: 20px;
+}
+
+.compras div {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    background-color: #6b6b6b;
+    border-radius: 20px;
+}
+
+.compras div:hover {
+    background-color: #525050;
+}
+
+body.active .compras div {
+    background-color: #132b41;
+}
+
+body.active .compras div:hover {
+    background-color: #081725;
+}
+
+button {
+    position: absolute;
+    height: 28px;
+    cursor: pointer;
+}
+
+body.active .compras .producto button {
+    background-color: darkgreen;
+}
+
+body.active .compras .producto button:hover {
+    background-color: rgb(253, 131, 44);
+}
+
+body.active .compras .producto-Col button {
+    background-color: darkgreen;
+}
+
+body.active .compras .producto-Col button:hover {
+    background-color: rgb(253, 131, 44);
+}
+
+body.active .compras .producto-Per button {
+    background-color: darkgreen;
+}
+
+body.active .compras .producto-Per button:hover {
+    background-color: rgb(253, 131, 44);
+}
+
+body.active .compras .producto-Arg button {
+    background-color: darkgreen;
+}
+
+body.active .compras .producto-Arg button:hover {
+    background-color: rgb(253, 131, 44);
+}
+
+body.active .compras .producto-Mex button {
+    background-color: darkgreen;
+}
+
+body.active .compras .producto-Mex button:hover {
+    background-color: rgb(253, 131, 44);
+}
+
+body.active .compras .producto p {
+    color: white;
+}
+
+body.active .compras .producto-Col p {
+    color: white;
+}
+
+body.active .compras .producto-Per p {
+    color: white;
+}
+
+body.active .compras .producto-Arg p {
+    color: white;
+}
+
+body.active .compras .producto-Mex p {
+    color: white;
+}
+
+label {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.fa {
+    padding-left: 50px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+body.active footer .fa {
+    color: white;
+}
+
+::selection {
+    background-color: green;
+}
+
+.container-1 {
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+    margin-left: 500px;
+    height: 10px;
+}
+
+body .container-1 h1 {
+    color: black;   
+}
+
+.container-2 {
+    padding-left: 1000px;
+    max-height: 10px;
+    cursor: pointer;
+}
+
+.container-3 {
+    background-color: chocolate;
+    padding: 10px;
+    position: fixed;
+    margin-top: 5px;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    max-height: 30px;
+}
+
+.container-3 input {
+    width: 89%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.suggestions {
+    display: none;
+    max-height: 280px;
+    opacity: 0;
+    pointer-events: none;
+    padding: 0;
+    overflow-y: auto;
+}
+
+.container-3 .suggestions {
+    display: none;
+    opacity: 0;
+    pointer-events: auto;
+    padding: 10px 8px;
+    max-height: 100px;    
+}
+
+.container-3.active .suggestions {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+    padding: 10px 8px;
+}
+
+.container-3.active .suggestions ul {
+    display: flex;
+    max-height: 10px;    
+}
+
+.suggestions ul {
+    opacity: 0;
+    list-style: none;
+    width: 80%;
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+select {
+    width: 40px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.ir-arriba {
+    display: none;
+    padding: 20px;
+    background-color: #011c35;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+body.active .ir-arriba {
+    display: none;
+    padding: 20px;
+    background-color: darkgrey;
+    color: #011c35;
+    font-size: 20px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}

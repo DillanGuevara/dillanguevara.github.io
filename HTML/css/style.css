@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mapa path {
+    stroke: #8B4513;
+    stroke-width: 2px;
+}
+
+nav {
+    background-color: #0582CA;
+    float: left;
+    width: 55%;
+    height: 1050px;
+    padding: 20px;
+}
+
+article {
+    float: left;
+    padding: 20px;
+    width: 45%;
+    background-color: #0D1321;
+    height: 1050px;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 25px;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+button {
+    background-color: #4ABFBF;
+    border: none;
+    padding: 5px;
+    color: black;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+}
+
+input {
+    padding: 6px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    border: none;
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.swal-title {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.swal-text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.swal-popup {
+    border-radius: 10px;
+    padding: 20px;
+}
+
+h1::after {
+    content: attr(title);
+    position: absolute;
+    top: 100%;  /* Posiciona el tooltip debajo del h1 */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+h1:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+nav .mapa svg .features path .Sede {
+    background-color: green;
+}
