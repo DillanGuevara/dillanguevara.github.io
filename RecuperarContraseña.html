@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles2.css">
+    <title>Recuperar Contraseña</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="icon" type="image/x-icon" href="./img/Logo.ico">
+    <script src="https://kit.fontawesome.com/f5ffacda22.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header>
+        <center>
+            <h1>Recuperar Contraseña</h1>
+        </center>
+
+        <div class="container-1">
+            <ul class="switch">
+                <i class="fa-solid fa-sun"></i>
+                <i class="fa-solid fa-moon"></i>
+            </ul>
+        </div>
+
+        <script src="./js/dark.js"></script>
+
+            <div class="Menu-horizontal-1">
+                <br/>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <a href="./index.html">Inicio</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <a href="./Registro.html">Registrarse</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <a href="./PQRS.html">PQRS</a>
+            </div>
+
+            <br/>
+
+        <br/>
+    </header>
+
+    <br/><br/>
+
+    <section>
+        <br/><br/>
+            <center>
+                <form id="form">
+                    <div class="field">
+                      <label for="Nombres">Nombres:</label>
+                      <input type="text" name="Nombres" id="Nombres" placeholder="Nombres">
+                    </div><br/>
+                    <div class="field">
+                      <label for="Email">Email:</label>
+                      <input type="text" name="Email" id="Email" placeholder="Email">
+                    </div><br/>
+                    <div class="field">
+                        <label for="Contraseña">Contraseña:</label>
+                        <input type="password" name="Contraseña" id="Contraseña" placeholder="Contraseña">
+                    </div><br/>
+                    <div class="field">
+                        <label for="ConfirmarContraseña">Confirmar Contraseña:</label>
+                        <input type="password" name="ConfirmarContraseña" id="ConfirmarContraseña" placeholder="Confirmar Contraseña">
+                    </div><br/>
+
+                    <input type="submit" id="button" value="Recuperar Contraseña"><br/><br/>
+                  </form><br/><br/>
+                  
+                  <script type="text/javascript"
+                    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+                  
+                  <script type="text/javascript">
+                    emailjs.init('1iGo7JPcwlYksEEWV')
+                  </script><br/><br/>
+            </center>
+
+            <script>
+                function comprobarClave() {
+                let Contraseña = document.f1.Contraseña.value
+                let ConfirmarContraseña = document.f1.ConfirmarContraseña.value
+
+                if (Contraseña == ConfirmarContraseña) {
+                    Swal.fire({
+                        title: "¡Las claves son iguales!",
+                        text: "¡Listo!",
+                        icon: "success"
+                    })
+                } else {
+                    Swal.fire({
+                        title: "¡Las claves son distintas!",
+                        text: "Las claves deben ser iguales",
+                        icon: "error"
+                    })
+                }
+            }
+
+            const btn = document.getElementById('button');
+
+            document.getElementById('form')
+                .addEventListener('submit', function(e) {
+            e.preventDefault();
+
+                const serviceID = 'default_service';
+                const templateID = 'template_81l399m';
+
+                emailjs.sendForm(serviceID, templateID, this)
+                    .then(() => {
+                    btn.value = 'Recuperar Contraseña';
+                    Swal.fire({
+                            title: "¡Contraseña recuperada exitosamente!",
+                            html: "<p class=swal-text>¡Bienvenido de nuevo!</p>",
+                            icon: "success",
+                            confirmButtonText: "OK",
+                            customClass: {
+                                title: "swal-title",
+                                popup: "swal-popup",
+                                confirmButton: "swal-confirm"
+                            }
+                        });
+                        document.getElementById("form").reset();
+                    }, (err) => {
+                    btn.value = 'Recuperar Contraseña';
+                    if (NuevaContraseña === "" || ConfirmarContraseña === "") {
+                    Swal.fire({
+                            title: "¡Por favor, llena todos los campos!",
+                            html: "<p class=swal-text>Llena el formulario para continuar</p>",
+                            icon: "error",
+                            confirmButtonText: "OK",
+                            customClass: {
+                                title: "swal-title",
+                                popup: "swal-popup",
+                                confirmButton: "swal-confirm"
+                            }
+                        });
+                    }
+                });
+            });
+            </script>
+        </section>
+    </body>
+</html>
